@@ -1,0 +1,167 @@
+.theme-light {
+  --bg: white;
+  --char: black;
+}
+
+.theme-dark {
+  --bg: #37474F;
+  --char: white;
+}
+
+body {
+  background-color: var(--bg);
+  transition: 0.4s all;
+  padding: 0 4%;
+  color: var(--char);
+}
+
+/* toggle css */
+.container {
+  width: 30vw;
+  overflow: hidden;
+  height: 20vw;
+  padding: 20px;
+  position: absolute;
+  top: 10%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: var(--fill);
+}
+
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  height: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 110%;
+  width: 60%;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(70%);
+  -ms-transform: translateX(70%);
+  transform: translateX(70%);
+  background: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 50px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* body {
+          padding: 0 4%;
+      } */
+.btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
+  line-height: 35px;
+}
+
+.btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #fff20a;
+  border-bottom: 2px solid #ccc100;
+}
+
+#rule-section {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  color: #FFF;
+  background: #6eb7ff;
+  border-bottom: solid 6px #3f87ce;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+#rule-section p {
+  margin: 0;
+  padding: 0;
+}
+
+.bs-callout {
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.bs-callout-success {
+  border-left-color: #5cb85c;
+}
+
+.bs-callout-info {
+  border-left-color: #428bca;
+}
+
+#quiz .question h2 {
+  font-size: 30px;
+}
+
+#quiz .question .reidai-span {
+  font-size: 20px;
+}
+
+.question h2 {
+  float: left;
+}
+
+.btn-group {
+  float: left;
+}

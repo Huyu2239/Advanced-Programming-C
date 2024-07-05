@@ -1,0 +1,14 @@
+.cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    float: left;
+  }
+  
+  #numberPlaceBoard {
+    margin: 20px auto;
+    width: 440px;
+  }

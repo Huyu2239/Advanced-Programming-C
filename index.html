@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="theme-dark">
+
+<head>
+  <meta charset="UTF-8">
+  <title>嘘つき探しゲーム</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="./style.css" rel="stylesheet" />
+</head>
+
+
+<body>
+  <div class="container">
+    <div class="toggler">
+      <label id="switch" class="switch">
+        <input type="checkbox" id="slider">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <h1>嘘つき探しゲーム</h1>
+  作者: 2班
+  <ul>
+    <li>2220146 仲松 颯真</li>
+    <li>2220020 伊藤 豪</li>
+    <li>2220019 市村 孔一</li>
+    <li>2220018 板清 直将</li>
+  </ul>
+
+  <div id="rule-section">
+    <h2>ルール</h2>
+    <p>
+      この『嘘つき探しゲーム』では、３～７人の登場人物たちが、「〇〇は 正直者 or 嘘つき である」と発言する。<br>
+      ただし、この発言は１人だけが必ず嘘を証言する。<br>
+      誰が嘘つきかを当てることができたらクリアとなる。<br>
+      <br>
+      操作説明<br>
+      1, 登場する人数を３〜７人の中からボタンで選択し、『ゲーム開始』のボタンをクリックする。<br>
+      2, 登場人物たちの証言が表示されるため、それらをもとに嘘つきを推測。<br>
+      3, その人物の名前を入力フォームに入力して『回答』ボタンをクリックする。<br>
+      <br>
+      あなたは嘘つきを見極められるか？
+    </p>
+  </div>
+
+  <div class="bs-callout bs-callout-success">
+    <div class="question">
+      <h2 style="width: 100px;">問題</h2>
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="modeButtonGroup">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+        <label id="button3" class="btn btn-outline-danger" for="btnradio3">3人</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+        <label id="button4" class="btn btn-outline-danger" for="btnradio4">4人</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+        <label id="button5" class="btn btn-outline-danger" for="btnradio5">5人</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+        <label id="button6" class="btn btn-outline-danger" for="btnradio6">6人</label>
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+        <label id="button7" class="btn btn-outline-danger" for="btnradio7">7人</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio-start" autocomplete="off">
+        <label id="start-btn" class="btn btn-outline-danger" for="btnradio-start">ゲーム開始</label>
+      </div>
+      <br>
+      <p id="quiz">
+        <br>
+        例題:<br>
+        アサカワ、イトウ、ウエノの3名がいて、<br>
+        正直者が2人、残りの1人が嘘つきである。<br>
+        ここで、正直者とは常に真実をいう人、嘘つきとは常に真実と反対のことをいう人である。<br>
+        このとき、次のようなアサカワ、イトウ、ウエノの証言が得られた。<br>
+        <br>
+        アサカワの証言: ウエノ　は嘘つきである。<br>
+        イトウ　の証言: アサカワは正直者である。<br>
+        ウエノ　の証言: イトウ　は正直者ではない。<br>
+        <br>
+        これらの証言に基づいて、嘘つきを1人探し出し、その名前を答えよ。<br>
+        <br>
+        答え: ウエノ<br>
+      </p>
+    </div>
+    <div class="ans-group">
+      <input type="text" id="ans" style="height:50px;">
+      <a class="btn btn--yellow" id="ans_btn">回答</a>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
